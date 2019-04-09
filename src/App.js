@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 import Basic from './components/Basic';
 import Complex from './components/Complex';
@@ -13,9 +13,11 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Route exact path="/" component={Home} />
-        <Route path="/basic" component={Basic} />
-        <Route path="/complex" component={Complex} />
+        <Router>
+          <Route exact path="/" component={Home} />
+          <Route path="/basic" component={Basic} />
+          <Route path="/complex" component={Complex} />
+        </Router>
         <Footer />
       </div>
     );
