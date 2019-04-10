@@ -1,3 +1,1 @@
-import Complex from './Complex';
-
-export default Complex;
+export { default as Complex } from './Complex';
