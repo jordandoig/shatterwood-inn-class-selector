@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import classData from './assets/data-flows/classData.json';
+import crazyClassData from './assets/data-flows/crazyClassData.json';
 
 import Selector from './components/Selector';
 import Footer from './components/Footer';
@@ -15,12 +16,12 @@ class App extends Component {
         <Header />
         <Router>
           <Route exact path="/" component={Home} />
-          <Route path="/pick-a-class" render={() => (
+          <Route exact path="/pick-a-class" render={() => (
             <Selector data={classData} ></Selector>
           )} />
-          {/* <Route path="/class" render={() => (
-            <Selector data={crazyData} ></Selector>
-          )} /> */}
+          <Route exact path="/pick-a-class/crazy" render={() => (
+            <Selector data={crazyClassData} ></Selector>
+          )} />
         </Router>
         <Footer />
       </div>

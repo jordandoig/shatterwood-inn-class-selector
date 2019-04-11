@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Popup from 'reactjs-popup';
 import './Selector.css';
 
 export default class Selector extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: props.data
+      data: props.data,
+      disabledIndex: null
     }
   }
 
@@ -30,18 +32,51 @@ export default class Selector extends Component {
           </Link>
         );
       } else {
-        return (
-          <div key={'options_' + index} onClick={this.handleSelection.bind( this, index )}>
-            <p>{ item.answer }</p>
-          </div>
-        );
+        return this.buildElement( item, index );
       }
     });
 
     return optionsJSX;
   }
 
+  buildElement( item, index ) {
+    let pathIndex = item.duplicatePath ? item.duplicatePath.index : index;
+    let onClick = this.handleSelection.bind(this, pathIndex);
+    let disabled = this.state.disabledIndex === index;
+
+    if ( disabled ) {
+      // add disabled styling
+      onClick = null;
+    }
+
+    let element = (
+      <div key={'options_' + index} onClick={onClick}>
+        <p>{item.answer}</p>
+      </div>
+    );
+
+    if ( item.fakeOut ) {
+      element = (
+        <Popup
+          trigger={element}
+          closeOnDocumentClick
+          onClose={this.disableIndex.bind(this, index)}
+          disabled={disabled}
+          key={'options_popup_' + index}
+        >
+          <p>{item.fakeOut}</p>
+        </Popup>
+      );
+    }
+
+    return element;
+  }
+
   handleSelection( index ) {
-    this.setState({ data: this.state.data.options[ index ] });
+    this.setState({ data: this.state.data.options[ index ], disabledIndex: null });
+  }
+
+  disableIndex( index ) {
+    this.setState({ disabledIndex: index });
   }
 }

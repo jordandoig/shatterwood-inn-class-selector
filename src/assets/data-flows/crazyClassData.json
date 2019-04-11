@@ -1,0 +1,141 @@
+{
+  "question": "When I fight, I like to...",
+  "options": [
+    {
+      "answer": "Hit them where it hurts -- physically.",
+      "question": "FAKE",
+      "options": []
+    },
+    {
+      "answer": "Use magic to weaken them in ways previously unimaginable.",
+      "question": "FAKE",
+      "options": []
+    },
+    {
+      "answer": "Either stop the fight, or end it quickly by helping my friends.",
+      "question": "What does \"utility\" mean to you?",
+      "options": [
+        {
+          "answer": "The folks who fix my water pipes.",
+          "question": "You think you're funny?",
+          "options": [
+            {
+              "answer": "No.",
+              "question": "Kinda dense?",
+              "options": [
+                {
+                  "answer": "Yeah",
+                  "question": "Like to go the long way around?",
+                  "options": [
+                    {
+                      "answer": "Yes",
+                      "question": "Through cities or nature?",
+                      "options": [
+                        {
+                          "answer": "Cities",
+                          "class": "rogue"
+                        },
+                        {
+                          "answer": "Nature",
+                          "class": "druid"
+                        },
+                        {
+                          "answer": "Option #3",
+                          "question": "Doesn't exist.",
+                          "options": [
+                            {
+                              "answer": "I'd like to make it exist.",
+                              "question": "Are you certain?",
+                              "options": [
+                                {
+                                  "answer": "Absolutely.",
+                                  "question": "You won't like it.",
+                                  "options": [
+                                    {
+                                      "answer": "I'm ready.",
+                                      "class": "dm"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "answer": "No",
+                      "fakeOut": "You just did."
+                    }
+                  ]
+                },
+                {
+                  "answer": "No",
+                  "duplicatePath": {
+                    "index": 0
+                  }
+                }
+              ]
+            },
+            {
+              "answer": "Yeah.",
+              "class": "bard"
+            }
+          ]
+        },
+        {
+          "answer": "Eighty billion options.",
+          "question": "For how many spells?",
+          "options": [
+            {
+              "answer": "Eighty billion spells.",
+              "class": "wizard"
+            },
+            {
+              "answer": "Four.",
+              "class": "sorcerer"
+            }
+          ]
+        },
+        {
+          "answer": "Praying the Dying Away",
+          "question": "Praying to...",
+          "options": [
+            {
+              "answer": "My great friend, God!",
+              "class": "cleric"
+            },
+            {
+              "answer": "It's... sorta a god.",
+              "question": "Do you fully understand it?",
+              "options": [
+                {
+                  "answer": "No",
+                  "question": "Do you want to?",
+                  "options": [
+                    {
+                      "answer": "No",
+                      "class": "warlock"
+                    },
+                    {
+                      "answer": "Yes",
+                      "fakeOut": "No you don't"
+                    }
+                  ]
+                },
+                {
+                  "answer": "Yes",
+                  "fakeOut": "No you don't"
+                }
+              ]
+            },
+            {
+              "answer": "The Holy Retributioner, Also God",
+              "class": "paladin"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
