@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import basicData from '../../assets/class-flows/basicData.json';
-import './Basic.css';
+import './Selector.css';
 
-export default class Basic extends Component {
+export default class Selector extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: basicData
+      data: props.data
     }
   }
 
   render() {
     return (
-      <main className="basicContainer">
+      <main className="selectorContainer">
         <header>{ this.state.data.question }</header>
         { this.renderOptions() }
       </main>
@@ -23,7 +22,7 @@ export default class Basic extends Component {
   renderOptions() {
     let options = this.state.data.options;
 
-    let optionsJSX = options.map((item, index, options) => {
+    let optionsJSX = options.map((item, index) => {
       if ( item.class ) {
         return (
           <Link to={ '/' + item.class } key={ 'options_' + index }>
@@ -43,12 +42,6 @@ export default class Basic extends Component {
   }
 
   handleSelection( index ) {
-    let newData = this.state.data.options[ index ];
-    if ( newData.class ) {
-      this.setState({ data: basicData });
-
-    } else {
-      this.setState({ data: newData });
-    }
+    this.setState({ data: this.state.data.options[ index ] });
   }
 }

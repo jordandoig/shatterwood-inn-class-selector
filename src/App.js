@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
+import classData from './assets/data-flows/classData.json';
 
-import Basic from './components/Basic';
-import Complex from './components/Complex';
+import Selector from './components/Selector';
+// import Complex from './components/Complex';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -15,8 +16,12 @@ class App extends Component {
         <Header />
         <Router>
           <Route exact path="/" component={Home} />
-          <Route path="/basic" component={Basic} />
-          <Route path="/complex" component={Complex} />
+          <Route path="/pick-a-class" render={() => (
+            <Selector data={classData} ></Selector>
+          )} />
+          {/* <Route path="/class" render={() => (
+            <Selector data={crazyData} ></Selector>
+          )} /> */}
         </Router>
         <Footer />
       </div>
