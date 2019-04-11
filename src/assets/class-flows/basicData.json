@@ -1,0 +1,199 @@
+{
+  "question": "How do you react to danger?",
+  "options": [
+    {
+      "answer": "I don't mind charging in.",
+      "question": "Are you more strong or nimble?",
+      "options": [
+        {
+          "answer": "Strong",
+          "question": "Are you good with the gods?",
+          "options": [
+            {
+              "answer": "I got 'em on speed dial.",
+              "question": "I live my faith by...",
+              "options": [
+                {
+                  "answer": "Channeling the nature and power of my god",
+                  "class": "cleric"
+                },
+                {
+                  "answer": "Delivering righteous justice",
+                  "class": "paladin"
+                }
+              ]
+            },
+            {
+              "answer": "Meh.",
+              "question": "Are you prone to fly into a rage?",
+              "options": [
+                {
+                  "answer": "No more than the next adventurer",
+                  "question": "How cool would it be to turn into a bear?",
+                  "options": [
+                    {
+                      "answer": "So cool!",
+                      "class": "druid"
+                    },
+                    {
+                      "answer": "I have allergies.",
+                      "class": "fighter"
+                    }
+                  ]
+                },
+                {
+                  "answer": "Raaaaaahhhhrrr!!!",
+                  "class": "barbarian"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "answer": "Nimble",
+          "question": "Do you live for kung-fu movies?",
+          "options": [
+            {
+              "answer": "Bruce Lee is my idol.",
+              "class": "monk"
+            },
+            {
+              "answer": "Not so much.",
+              "question": "Would you risk your life for a good story?",
+              "options": [
+                {
+                  "answer": "I think not.",
+                  "question": "I am deadly because...",
+                  "options": [
+                    {
+                      "answer": "I'm a master hunter.",
+                      "class": "ranger"
+                    },
+                    {
+                      "answer": "I'm a born schemer.",
+                      "question": "My schemes usually involve...",
+                      "options": [
+                        {
+                          "answer": "Cloak and dagger tactics.",
+                          "class": "rogue"
+                        },
+                        {
+                          "answer": "Allying myself with dark and strange elements.",
+                          "class": "warlock"
+                        }
+                      ]
+                    },
+                    {
+                      "answer": "I'm experienced in the art of combat.",
+                      "class": "fighter"
+                    }
+                  ]
+                },
+                {
+                  "answer": "You know it!",
+                  "class": "bard"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "answer": "I deal with it from a safe distance.",
+      "question": "What do you rely on most?",
+      "options": [
+        {
+          "answer": "Skills",
+          "question": "How good are you at being quiet?",
+          "options": [
+            {
+              "answer": "*silence*",
+              "question": "Do you keep any pets?",
+              "options": [
+                {
+                  "answer": "My best friends are ferocious beasts.",
+                  "class": "ranger"
+                },
+                {
+                  "answer": "What, like a gerbil?",
+                  "question": "I'm trained to kill using...",
+                  "options": [
+                    {
+                      "answer": "My brain. And maybe poison.",
+                      "class": "rogue"
+                    },
+                    {
+                      "answer": "Anything that skewers, slices, or smashes.",
+                      "class": "fighter"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "answer": "I don't know, i've never tried it!",
+              "class": "bard"
+            }
+          ]
+        },
+        {
+          "answer": "Magic",
+          "question": "I want...",
+          "options": [
+            {
+              "answer": "Magical stamina for days",
+              "class": "warlock"
+            },
+            {
+              "answer": "One or two supernatural nukes",
+              "class": "sorcerer"
+            },
+            {
+              "answer": "Flexibility",
+              "question": "Are you the academic type?",
+              "options": [
+                {
+                  "answer": "Not necessarily",
+                  "question": "Are you religious?",
+                  "options": [
+                    {
+                      "answer": "No, my power comes from my righteous lute solos.",
+                      "class": "bard"
+                    },
+                    {
+                      "answer": "No, my power comes from within.",
+                      "class": "sorcerer"
+                    },
+                    {
+                      "answer": "Define \"religious.\"",
+                      "question": "Where does your power come from?",
+                      "options": [
+                        {
+                          "answer": "My connection with nature",
+                          "class": "druid"
+                        },
+                        {
+                          "answer": "A creepy, otherworldy pact",
+                          "class": "warlock"
+                        },
+                        {
+                          "answer": "The gods",
+                          "class": "cleric"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "answer": "I'm a bookworm.",
+                  "class": "wizard"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
