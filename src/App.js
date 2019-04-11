@@ -3,7 +3,6 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 import classData from './assets/data-flows/classData.json';
 
 import Selector from './components/Selector';
-// import Complex from './components/Complex';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home';
