@@ -53,7 +53,13 @@
                                   "options": [
                                     {
                                       "answer": "I'm ready.",
-                                      "class": "dm"
+                                      "question": "DM",
+                                      "options": [
+                                        {
+                                          "answer": "I wasn't ready.",
+                                          "reset": true
+                                        }
+                                      ]
                                     }
                                   ]
                                 }

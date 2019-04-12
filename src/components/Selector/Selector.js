@@ -47,6 +47,9 @@ export default class Selector extends Component {
     if ( disabled ) {
       // add disabled styling
       onClick = null;
+    } else if ( item.reset ) {
+      // add reset styling??
+      onClick = this.reset.bind( this );
     }
 
     let element = (
@@ -78,5 +81,9 @@ export default class Selector extends Component {
 
   disableIndex( index ) {
     this.setState({ disabledIndex: index });
+  }
+
+  reset() {
+    this.setState({ data: this.props.data, disableIndex: null });
   }
 }
