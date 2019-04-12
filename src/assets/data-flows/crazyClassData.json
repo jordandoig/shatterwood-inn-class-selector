@@ -8,8 +8,159 @@
     },
     {
       "answer": "Use magic to weaken them in ways previously unimaginable.",
-      "question": "FAKE",
-      "options": []
+      "question": "How beefy do you like being?",
+      "options": [
+        {
+          "answer": "Honestly, if I get sneezed on, it might be too late.",
+          "question": "Picture your perfect toolbox. It's basically...",
+          "options": [
+            {
+              "answer": "You stole these tools from an abomination that might destroy the world",
+              "question": "This analogy isn't going very well.",
+              "options": [
+                {
+                  "answer": "Nothing else goes very well.",
+                  "class": "warlock"
+                }
+              ]
+            },
+            {
+              "answer": "Full to the bri of tools you bought, found, and learned. Nerd.",
+              "class": "wizard"
+            },
+            {
+              "answer": "Pristine quality over quantity that you've just always had. Jock.",
+              "class": "sorcerer"
+            },
+            {
+              "answer": "Given to you from your church, they prayed away your poor health.",
+              "question": "How do you view hammers?",
+              "options": [
+                {
+                  "answer": "Someone might get hurt :(",
+                  "question": "Don't let them tell you it's your fault when you fix their boo-boos, okay?",
+                  "options": [
+                    {
+                      "answer": "Okay",
+                      "class": "cleric"
+                    }
+                  ]
+                },
+                {
+                  "answer": "I might get someone hurt :)",
+                  "class": "paladin"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "answer": "A little, nothing major.",
+          "question": "What if you could turn into an elephant, be REALLY beefy?",
+          "options": [
+            {
+              "answer": "But then I'd be ugly!",
+              "question": "Okay...",
+              "options": [
+                {
+                  "answer": "pretty boy",
+                  "class": "bard"
+                }
+              ]
+            },
+            {
+              "answer": "What the hell? That sounds awesome.",
+              "question": "Is only being able to do it twice a day a deal breaker?",
+              "options": [
+                {
+                  "answer": "Yeah...",
+                  "question": "What if you worshipped a godly elephant instead?",
+                  "options": [
+                    {
+                      "answer": "That'd be lit.",
+                      "question": "Is your elephant god popular?",
+                      "options": [
+                        {
+                          "answer": "Totally.",
+                          "question": "Get to preachin'!",
+                          "options": [
+                            {
+                              "answer": "Will do!",
+                              "class": "cleric"
+                            },
+                            {
+                              "answer": "I don't want to preach!",
+                              "question": "What DO you want?",
+                              "options": [
+                                {
+                                  "answer": "To... smite?",
+                                  "class": "paladin"
+                                },
+                                {
+                                  "answer": "To... punch it?",
+                                  "class": "monk"
+                                },
+                                {
+                                  "answer": "To... do a little bit of everything, none of it very well, and be extremely confusing to everyone?",
+                                  "class": "mystic"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "answer": "Only I know he exists.",
+                          "question": "Hippy.",
+                          "options": [
+                            {
+                              "answer": "Whatever",
+                              "class": "warlock"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "answer": "Can I hunt it?",
+                      "question": "You'd want to?",
+                      "options": [
+                        {
+                          "answer": "Yeah",
+                          "class": "ranger"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "answer": "Not at all.",
+                  "class": "druid"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "answer": "Me big.",
+          "question": "You charming?",
+          "options": [
+            {
+              "answer": "*picks nose*",
+              "question": "I... don't trust you around magic.",
+              "options": [
+                {
+                  "answer": "Me understand",
+                  "class": "barbarian"
+                }
+              ]
+            },
+            {
+              "answer": "It's like I'm from a fairy tale.",
+              "class": "paladin"
+            }
+          ]
+        }
+      ]
     },
     {
       "answer": "Either stop the fight, or end it quickly by helping my friends.",
