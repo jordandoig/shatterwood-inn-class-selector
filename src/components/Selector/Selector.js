@@ -50,6 +50,8 @@ export default class Selector extends Component {
     } else if ( item.reset ) {
       // add reset styling??
       onClick = this.reset.bind( this );
+    } else if ( item.reRoute ) {
+      onClick = this.reRoute.bind( this, item.reRoute.keySequence );
     }
 
     let element = (
@@ -85,5 +87,15 @@ export default class Selector extends Component {
 
   reset() {
     this.setState({ data: this.props.data, disableIndex: null });
+  }
+
+  reRoute( keySequence ) {
+    let newData = this.props.data;
+
+    keySequence.forEach(( key ) => {
+      newData = newData.options[ key ];
+    });
+
+    this.setState({ data: newData, disableIndex: null });
   }
 }

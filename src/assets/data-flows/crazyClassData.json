@@ -3,8 +3,519 @@
   "options": [
     {
       "answer": "Hit them where it hurts -- physically.",
-      "question": "FAKE",
-      "options": []
+      "question": "What's your view on personal space?",
+      "options": [
+        {
+          "answer": "I don't have boundaries.",
+          "question": "You do that by being really fast?",
+          "options": [
+            {
+              "answer": "Nope, just by being really close.",
+              "question": "Like REALLY close?",
+              "options": [
+                {
+                  "answer": "Close enough to sink a knife in.",
+                  "reRoute": {
+                    "keySequence": [ 0, 1, 0 ]
+                  }
+                },
+                {
+                  "answer": "REALLY close.",
+                  "class": "barbarian"
+                },
+                {
+                  "answer": "Pretty close, yeah.",
+                  "question": "You like having tools to stay close?",
+                  "options": [
+                    {
+                      "answer": "I love tools.",
+                      "question": "Tools as in...",
+                      "options": [
+                        {
+                          "answer": "Weapons.",
+                          "question": "Like, EVERY weapon?",
+                          "options": [
+                            {
+                              "answer": "What do I look like?",
+                              "class": "fighter"
+                            }
+                          ]
+                        },
+                        {
+                          "answer": "Tools. Like lockpicks, grappling hooks, crowbars.",
+                          "question": "Crowbars are a weapon.",
+                          "options": [
+                            {
+                              "answer": "Shut up.",
+                              "class": "rogue"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "answer": "I prefer just myself.",
+                      "question": "Fast feet?",
+                      "options": [
+                        {
+                          "answer": "Sonic's my name, baby.",
+                          "question": "Get away from my table.",
+                          "options": [
+                            {
+                              "answer": "I'm sorry.",
+                              "question": "Good, let's try that again.",
+                              "options": [
+                                {
+                                  "answer": "...",
+                                  "reRoute": {
+                                    "keySequence" : [ 0, 0, 0, 2, 1 ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "answer": "Sonic is good!",
+                              "question": "Oh man. Rocks fell. You died.",
+                              "options": [
+                                {
+                                  "answer": "Try again?",
+                                  "reset": true
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "answer": "Actually, no, they're just big feet.",
+                          "question": "You're a pretty big guy.",
+                          "options": [
+                            {
+                              "answer": "Compared to you.",
+                              "class": "barbarian"
+                            },
+                            {
+                              "answer": "What?",
+                              "question": "It's from Batman.",
+                              "options": [
+                                {
+                                  "answer": "Oh, sorry. Been a while since I've seen it.",
+                                  "question": "Go watch it, then restart.",
+                                  "options": [
+                                    {
+                                      "answer": "Done!",
+                                      "reset": true
+                                    }
+                                  ]
+                                },
+                                {
+                                  "answer": "Never watched Batman.",
+                                  "duplicatePath": {
+                                    "index": 0
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "answer": "Yeah, pretty fast.",
+                          "class": "monk"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "answer": "I once ran a marathon in twelve seconds.",
+              "question": "Usain Bolt a role model?",
+              "options": [
+                {
+                  "answer": "Of course he is.",
+                  "class": "monk"
+                },
+                {
+                  "answer": "Not really.",
+                  "fakeOut": "You know that isn't true."
+                }
+              ]
+            },
+            {
+              "answer": "Nope, just by sneakin' up right on ya.",
+              "reRoute": {
+                "keySequence" : [ 0, 1, 0 ]
+              }
+            }
+          ]
+        },
+        {
+          "answer": "Respectable, but close when I need to be.",
+          "question": "You an animal kind of person?",
+          "options": [
+            {
+              "answer": "Not really.",
+              "question": "You like sneakin' around?",
+              "options": [
+                {
+                  "answer": "I could give or take it.",
+                  "question": "You could give or take a lot of things, huh?",
+                  "options": [
+                    {
+                      "answer": "I guess.",
+                      "class": "fighter"
+                    },
+                    {
+                      "answer": "Nuh-uh! I'm passionate about stuff!",
+                      "question": "Really? Name one thing.",
+                      "options": [
+                        {
+                          "answer": "...",
+                          "question": "That's what I thought.",
+                          "options": [
+                            {
+                              "answer": "...",
+                              "class": "fighter"
+                            }
+                          ]
+                        },
+                        {
+                          "answer": "Me!",
+                          "question": "Got a magical bone in your body?",
+                          "options": [
+                            {
+                              "answer": "Several, now that we mention it.",
+                              "class": "sorcerer"
+                            },
+                            {
+                              "answer": "Only magic here is from my sick songs!",
+                              "class": "bard"
+                            }
+                          ]
+                        },
+                        {
+                          "answer": "God!",
+                          "question": "Do you like hitting things for your god?",
+                          "options": [
+                            {
+                              "answer": "Of course.",
+                              "question": "Do \"things\" include anyone who doesn't believe in your god?",
+                              "options": [
+                                {
+                                  "answer": "What are you implying?",
+                                  "question": "Nothing.",
+                                  "options": [
+                                    {
+                                      "answer": "...",
+                                      "class": "paladin"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "answer": "What kind of question is that?",
+                                  "question": "Nevermind.",
+                                  "options": [
+                                    {
+                                      "answer": "...",
+                                      "class": "paladin"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "answer": "No, and they don't either. They're very loving.",
+                              "question": "No, and they don't either. They're very loving.",
+                              "options": [
+                                {
+                                  "answer": "Are you just saying that because sometimes he answers your calls?",
+                                  "question": "Gods can do that?",
+                                  "options": [
+                                    {
+                                      "answer": "Yours can!",
+                                      "class": "cleric"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "answer": "Actually, it's a \"she,\" and it's Mother Earth.",
+                                  "question": "Actually, we're not on earth. But I'll let that slide.",
+                                  "options": [
+                                    {
+                                      "answer": "...",
+                                      "class": "druid"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "answer": "I wouldn't really call it a \"God\" actually...",
+                              "question": "Let me guess, is it some crazy spirit thing?",
+                              "options": [
+                                {
+                                  "answer": "Yes.",
+                                  "question": "That gave you magical powers?",
+                                  "options": [
+                                    {
+                                      "answer": "Yeah.",
+                                      "question": "What's your opinion on the word \"Eldritch\"?",
+                                      "options": [
+                                        {
+                                          "answer": "I could say it every six seconds.",
+                                          "question": "I'll keep you to that.",
+                                          "options": [
+                                            {
+                                              "answer": "...",
+                                              "class": "warlock"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "answer": "I'm pretty sure, by definition, that's what the thing is.",
+                                          "class": "warlock"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "answer": "I'm doing that as we speak",
+                  "question": "You'll love this.",
+                  "options": [
+                    {
+                      "answer": "...",
+                      "class": "rogue"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "answer": "Absolutely.",
+              "question": "Like, so much you want to be one?",
+              "options": [
+                {
+                  "answer": "I prefer them as pets...",
+                  "class": "ranger"
+                },
+                {
+                  "answer": "Is that an option?",
+                  "class": "druid"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "answer": "Please get away from me.",
+          "question": "What's Katniss Everdeen to you?",
+          "options": [
+            {
+              "answer": "A role model!",
+              "class": "ranger"
+            },
+            {
+              "answer": "She should have used a gun...",
+              "question": "We don't have guns. Would a hand crossbow work?",
+              "options": [
+                {
+                  "answer": "Yeah, that's fine",
+                  "class": "rogue"
+                },
+                {
+                  "answer": "Absolutely not.",
+                  "question": "What's your opinion on \"canon\"?",
+                  "options": [
+                    {
+                      "answer": "Great to blow things up with",
+                      "question": "Was that a pun?",
+                      "options": [
+                        {
+                          "answer": "No. What's a pun?",
+                          "question": "...Did you mean to go to the \"Up close\" flow?",
+                          "options": [
+                            {
+                              "answer": "...Yeah.",
+                              "class": "barbarian"
+                            },
+                            {
+                              "answer": "No, I'm where I belong.",
+                              "class": "fighter"
+                            }
+                          ]
+                        },
+                        {
+                          "answer": "Heh, yeah.",
+                          "question": "Do you want to actually blow things up?",
+                          "options": [
+                            {
+                              "answer": "Do I even have to say it?",
+                              "class": "artificer"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "answer": "I don't need to be officially recognized.",
+                      "class": "artificer"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "answer": "Who?",
+              "question": "You sound like a nerd. Sure you don't like magic?",
+              "options": [
+                {
+                  "answer": "No, I'm certain",
+                  "question": "What about magic that doesn't leave you vulnerable?",
+                  "options": [
+                    {
+                      "answer": "Still no.",
+                      "question": "Oh. You're not a nerd. You're just not... \"book smart.\"",
+                      "options": [
+                        {
+                          "answer": "Nope.",
+                          "question": "You just like saying \"no\" to things, huh?",
+                          "options": [
+                            {
+                              "answer": "No.",
+                              "question": "Say no again.",
+                              "options": [
+                                {
+                                  "answer": "No.",
+                                  "question": "Do you even want to play?",
+                                  "options": [
+                                    {
+                                      "answer": "No.",
+                                      "question": "Go grab a pizza.",
+                                      "options": [
+                                        {
+                                          "answer": "Start Over.",
+                                          "reset": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "answer": "Yeah.",
+                                      "question": "Do you just like messing with me?",
+                                      "options": [
+                                        {
+                                          "answer": "Yeah.",
+                                          "class": "bard"
+                                        },
+                                        {
+                                          "answer": "No.",
+                                          "fakeOut": "Yeah, you do."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "answer": "Nah.",
+                                  "duplicatePath": {
+                                    "index": 0
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "answer": "Lol, yeah.",
+                              "question": "You sound like an asshole.",
+                              "options": [
+                                {
+                                  "answer": "...",
+                                  "class": "bard"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "answer": "Right.",
+                          "question": "Axes or swords?",
+                          "options": [
+                            {
+                              "answer": "Axes.",
+                              "class": "barbarian"
+                            },
+                            {
+                              "answer": "Swords.",
+                              "class": "fighter"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "answer": "I'm interested.",
+                      "question": "Which sounds most appealing?",
+                      "options": [
+                        {
+                          "answer": "God",
+                          "question": "Damage or utility?",
+                          "options": [
+                            {
+                              "answer": "Damage",
+                              "class": "paladin"
+                            },
+                            {
+                              "answer": "Utility",
+                              "class": "cleric"
+                            }
+                          ]
+                        },
+                        {
+                          "answer": "Devils",
+                          "class": "warlock"
+                        },
+                        {
+                          "answer": "Trees",
+                          "question": "Do you want to BE a tree?",
+                          "options": [
+                            {
+                              "answer": "That's weird.",
+                              "question": "Yeah, kinda.",
+                              "options": [
+                                {
+                                  "answer": "...",
+                                  "class": "ranger"
+                                }
+                              ]
+                            },
+                            {
+                              "answer": "That's an option?",
+                              "class": "druid"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "answer": "I might have changed my mind... Let's go with magic afterall.",
+                  "reRoute": {
+                    "keySequence": [ 1 ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "answer": "Use magic to weaken them in ways previously unimaginable.",
