@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
+import Header from '../Header';
 import './Home.css'
 
 class Home extends Component {
   render() {
     return (
-      <main className="homeContainer">
-        Here is the homeContainer!!!
-      </main>
+      <div className="homeContainer">
+        <Header />
+        <main>
+          Here is the homeContainer!!!
+        </main>
+      </div>
     );
   }
 }

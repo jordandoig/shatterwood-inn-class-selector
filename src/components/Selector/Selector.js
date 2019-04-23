@@ -8,14 +8,15 @@ export default class Selector extends Component {
     super(props);
     this.state = {
       data: props.data,
-      disabledIndex: null
+      disabledIndex: null,
+      questionNumber: 1
     }
   }
 
   render() {
     return (
       <main className="selectorContainer">
-        <header>{ this.state.data.question }</header>
+        <header>{ this.state.questionNumber + '. ' + this.state.data.question }</header>
         { this.renderOptions() }
       </main>
     );
@@ -78,7 +79,7 @@ export default class Selector extends Component {
   }
 
   handleSelection( index ) {
-    this.setState({ data: this.state.data.options[ index ], disabledIndex: null });
+    this.setState({ data: this.state.data.options[ index ], disabledIndex: null, questionNumber: this.state.questionNumber + 1 });
   }
 
   disableIndex( index ) {
