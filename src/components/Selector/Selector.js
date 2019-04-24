@@ -6,9 +6,14 @@ import './Selector.css';
 export default class Selector extends Component {
   constructor(props) {
     super(props);
+
+    this.render = this.render.bind(this);
+    this.back = this.back.bind(this);
+
     this.state = {
       data: props.data,
       disabledIndex: null,
+      history: [],
       questionNumber: 1
     }
   }
@@ -16,7 +21,10 @@ export default class Selector extends Component {
   render() {
     return (
       <main className="selectorContainer">
-        <header>{ this.state.questionNumber + '. ' + this.state.data.question }</header>
+        <header>
+          <button onClick={this.back}>Back</button>
+          <h2>{this.state.questionNumber + '. ' + this.state.data.question}</h2>
+        </header>
         { this.renderOptions() }
       </main>
     );
@@ -79,7 +87,15 @@ export default class Selector extends Component {
   }
 
   handleSelection( index ) {
-    this.setState({ data: this.state.data.options[ index ], disabledIndex: null, questionNumber: this.state.questionNumber + 1 });
+    let history = this.state.history;
+    history.push(index);
+
+    this.setState({
+      data: this.state.data.options[index],
+      disabledIndex: null,
+      history,
+      questionNumber: this.state.questionNumber + 1
+    });
   }
 
   disableIndex( index ) {
@@ -87,16 +103,37 @@ export default class Selector extends Component {
   }
 
   reset() {
-    this.setState({ data: this.props.data, disableIndex: null });
+    this.setState({
+      data: this.props.data,
+      disableIndex: null,
+      history: [],
+      questionNumber: 1
+    });
   }
 
-  reRoute( keySequence ) {
+  reRoute( keySequence, index ) {
+    let history = this.state.history;
+    history.push(index);
+
+    this.rebuildFromStart( keySequence, history );
+  }
+
+  back() {
+    if ( this.state.history ) {
+      let replayHistory = this.state.history;
+      replayHistory.pop();
+
+      this.rebuildFromStart( replayHistory, replayHistory );
+    }
+  }
+
+  rebuildFromStart( sequence, newHistory ) {
     let newData = this.props.data;
 
-    keySequence.forEach(( key ) => {
-      newData = newData.options[ key ];
+    sequence.forEach((key) => {
+      newData = newData.options[key];
     });
 
-    this.setState({ data: newData, disableIndex: null });
+    this.setState({ data: newData, disableIndex: null, newHistory, questionNumber: sequence.length + 1 });
   }
 }
