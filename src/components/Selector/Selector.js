@@ -7,13 +7,15 @@ export default class Selector extends Component {
   constructor(props) {
     super(props);
 
-    this.render = this.render.bind(this);
     this.back = this.back.bind(this);
+    this.next = this.next.bind(this);
+    this.rebuildFromStart = this.rebuildFromStart.bind(this);
 
     this.state = {
       data: props.data,
       disabledIndex: null,
       history: [],
+      nextCallback: null,
       questionNumber: 1
     }
   }
@@ -22,11 +24,20 @@ export default class Selector extends Component {
     return (
       <main className="selectorContainer">
         <header>
-          <button onClick={this.back}>Back</button>
           <h2>{this.state.questionNumber + '. ' + this.state.data.question}</h2>
         </header>
         { this.renderOptions() }
+        { this.renderButtons() }
       </main>
+    );
+  }
+
+  renderButtons() {
+    return (
+      <div className="buttonContainer">
+        <button onClick={this.back}>Back</button>
+        <button onClick={this.next}>Next</button>
+      </div>
     );
   }
 
@@ -49,18 +60,12 @@ export default class Selector extends Component {
   }
 
   buildElement( item, index ) {
-    let pathIndex = item.duplicatePath ? item.duplicatePath.index : index;
-    let onClick = this.handleSelection.bind(this, pathIndex);
     let disabled = this.state.disabledIndex === index;
+    let onClick = this.handleSelection.bind(this, item, index);
 
     if ( disabled ) {
       // add disabled styling
       onClick = null;
-    } else if ( item.reset ) {
-      // add reset styling??
-      onClick = this.reset.bind( this );
-    } else if ( item.reRoute ) {
-      onClick = this.reRoute.bind( this, item.reRoute.keySequence );
     }
 
     let element = (
@@ -86,7 +91,20 @@ export default class Selector extends Component {
     return element;
   }
 
-  handleSelection( index ) {
+  handleSelection( item, index ) {
+    let pathIndex = item.duplicatePath ? item.duplicatePath.index : index;
+    let callback = this.select.bind(this, pathIndex);
+
+    if ( item.reset ) {
+      callback = this.reset.bind( this );
+    } else if ( item.reRoute ) {
+      callback = this.reRoute.bind( this, item.reRoute.keySequence );
+    }
+
+    this.setState({ nextCallback: callback });
+  }
+
+  select( index ) {
     let history = this.state.history;
     history.push(index);
 
@@ -127,6 +145,10 @@ export default class Selector extends Component {
     }
   }
 
+  next() {
+    this.state.nextCallback();
+  }
+
   rebuildFromStart( sequence, newHistory ) {
     let newData = this.props.data;
 
@@ -134,6 +156,6 @@ export default class Selector extends Component {
       newData = newData.options[key];
     });
 
-    this.setState({ data: newData, disableIndex: null, newHistory, questionNumber: sequence.length + 1 });
+    this.setState({ data: newData, disableIndex: null, newHistory, questionNumber: newHistory.length + 1 });
   }
 }
