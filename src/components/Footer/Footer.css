@@ -1,3 +1,20 @@
 .appFooter {
-  background-color: firebrick;
+  color: #ffffff;
+  background-color: #8B5E3C; /** This ain't right */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linkContainer {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.linkContainer a {
+  text-decoration: none;
+  color: #ffffff;
 }
