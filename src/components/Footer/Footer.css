@@ -1,4 +1,5 @@
 .appFooter {
+  height: 10%;
   color: #ffffff;
   background-color: #8B5E3C; /** This ain't right */
   display: flex;
