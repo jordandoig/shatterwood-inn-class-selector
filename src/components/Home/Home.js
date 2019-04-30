@@ -6,9 +6,11 @@ class Home extends Component {
   render() {
     return (
       <div className="homeContainer">
-        <Header />
+        {/* <Header /> */}
+        <image src="" />
+        <h2>!!Under Construction!!</h2>
         <main>
-          Here is the homeContainer!!!
+          We're still putting together the ins and outs of the race and class selectors, but hope to have them out in the world soon!
         </main>
       </div>
     );
